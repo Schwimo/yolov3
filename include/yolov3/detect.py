@@ -179,7 +179,7 @@ class Detector:
                                 label = '%s %.2f' % (names[int(cls)], conf)
                                 plot_one_box(xyxy, im0, label=label, color=colors[int(cls)])
                             
-                            self.callback((xyxy, cls, conf))
+                        self.callback(det)
 
                     # Print time (inference + NMS)
                     #print('%sDone. (%.3fs)' % (s, time.time() - t))
